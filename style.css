@@ -7,72 +7,68 @@
 
 body {
   height: 100vh;
-  background: radial-gradient(circle, #ffafbd, #ffc3a0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(#020111, #191621);
   overflow: hidden;
+  color: white;
 }
 
-.card {
-  background: white;
-  padding: 40px;
-  border-radius: 25px;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.scene {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 60px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-  animation: pop 1s ease;
 }
 
-@keyframes pop {
-  from { transform: scale(0.7); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+.couple {
+  width: 200px;
+  height: 230px;
+  background: linear-gradient(#333, #000);
+  border-radius: 50% 50% 25% 25%;
+  box-shadow: inset -50px 0 #222, inset 50px 0 #222;
+  margin-bottom: 30px;
+  opacity: 0.85;
 }
 
 h1 {
-  color: #ff4d6d;
+  color: #ff6b9a;
+  text-shadow: 0 0 12px crimson;
 }
 
 .buttons {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 button {
   padding: 12px 30px;
-  border: none;
   border-radius: 30px;
+  border: none;
   font-size: 16px;
   cursor: pointer;
   margin: 10px;
 }
 
-#yesBtn {
-  background: #ff4d6d;
+#yes {
+  background: crimson;
   color: white;
 }
 
-#noBtn {
-  background: #ddd;
+#no {
+  background: #333;
+  color: white;
 }
 
-#message {
+#msg {
   margin-top: 20px;
-  color: #ff4d6d;
-}
-
-.heart {
-  position: absolute;
-  color: red;
-  font-size: 20px;
-  animation: float 6s linear infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(100vh);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10vh);
-    opacity: 0;
-  }
+  color: #ffd6e0;
 }
