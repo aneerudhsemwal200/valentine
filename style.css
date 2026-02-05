@@ -1,50 +1,74 @@
-body {
+* {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
 }
 
-.container {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
+body {
+  height: 100vh;
+  background: linear-gradient(#020111, #191621);
+  overflow: hidden;
+  color: white;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.scene {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 60px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.couple {
+  width: 200px;
+  height: 230px;
+  background: linear-gradient(#333, #000);
+  border-radius: 50% 50% 25% 25%;
+  box-shadow: inset -50px 0 #222, inset 50px 0 #222;
+  margin-bottom: 30px;
+  opacity: 0.85;
 }
 
 h1 {
-  color: #ff4d6d;
+  color: #ff6b9a;
+  text-shadow: 0 0 12px crimson;
+}
+
+.buttons {
+  margin-top: 20px;
 }
 
 button {
-  margin-top: 20px;
-  padding: 12px 25px;
+  padding: 12px 30px;
+  border-radius: 30px;
   border: none;
-  border-radius: 25px;
-  background: #ff4d6d;
-  color: white;
   font-size: 16px;
   cursor: pointer;
+  margin: 10px;
 }
 
-button:hover {
-  background: #e63950;
+#yes {
+  background: crimson;
+  color: white;
 }
 
-.hidden {
-  display: none;
+#no {
+  background: #333;
+  color: white;
 }
 
-#loveMessage {
-  margin-top: 25px;
-  animation: pop 0.6s ease;
-}
-
-@keyframes pop {
-  0% { transform: scale(0.6); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+#msg {
+  margin-top: 20px;
+  color: #ffd6e0;
 }
